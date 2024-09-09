@@ -28,7 +28,6 @@ app.MapGet("/", async context =>
     await context.Response.SendFileAsync(Path.Combine("wwwroot", "index.html"));
 });
 
-
 // optional MVC attribute: [FromQuery(Name = "userIdentifier")] string? userIdentifier
 app.MapGet("/avatar", async (IAvatarService avatarService, string? userIdentifier) =>
 {

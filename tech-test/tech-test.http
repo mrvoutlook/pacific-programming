@@ -1,6 +1,29 @@
-@tech_test_HostAddress = http://localhost:5220
+@tech_test_HostAddress = https://localhost:7126
 
-GET {{tech_test_HostAddress}}/weatherforecast/
+// Default Image Url
+GET {{tech_test_HostAddress}}/avatar?userIdentifier=xxxxxx
 Accept: application/json
 
 ###
+
+// Rule A
+GET {{tech_test_HostAddress}}/avatar?userIdentifier=xx0006
+Accept: application/json
+
+###
+
+// Rule B
+GET {{tech_test_HostAddress}}/avatar?userIdentifier=xx0001
+Accept: application/json
+
+###
+
+// Rule C
+GET {{tech_test_HostAddress}}/avatar?userIdentifier=xx000a
+Accept: application/json
+
+###
+
+// Rule D
+GET {{tech_test_HostAddress}}/avatar?userIdentifier=xx000$
+Accept: application/json
